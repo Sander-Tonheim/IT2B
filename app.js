@@ -4,17 +4,6 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-async function getCatFact() {
-	const response = await fetch("https://catfact.ninja/fact");
-	if (!response.ok) {
-		return;
-	}
-	console.log(response);
-
-	const data = await response.json();
-	console.log(data);
-}
-
 app.get("/", async (req, res) => {
 	const fact = await getCatFact();
 	res.render("index", {
