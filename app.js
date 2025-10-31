@@ -15,7 +15,7 @@ async function getCatFact() {
 	console.log(data);
 }
 
-console.log("hei dette er en anne endring hei heih");
+app.get("/", async (req, res) => {
 	const fact = await getCatFact();
 	res.render("index", {
 		title: "Hjemme side",
