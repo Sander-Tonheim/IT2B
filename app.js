@@ -5,7 +5,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
-	const fact = await getCatFact();
+
 	res.render("index", {
 		title: "Hjemme side",
 		heading: "Hjemme side",
